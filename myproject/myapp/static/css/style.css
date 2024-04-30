@@ -11,7 +11,7 @@ body {
 #hero {
   text-align: center;
   padding: 50px 0;
-  background-color: #111;
+  background-color: #eed4d4;
 }
 
 #hero img {
@@ -154,5 +154,28 @@ th {
 
 #contact p {
   font-size: 18px;
-  line-height: 1.
+  line-height: 1.6;
+}
+
+/* Стили для кнопок переключения слайдера */
+.slider--prev,
+.slider--next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider--prev {
+  left: 10px;
+}
+
+.slider--next {
+  right: 10px;
 }
