@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -14,14 +15,14 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/elegant-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
 </head>
 
 <body>
@@ -35,7 +36,7 @@
         <div class="container-fluid">
             <div class="logo">
                 <a href="./index.html">
-                    <img src="img/logo.png" alt="">
+                    <img src="{% static 'img/logo.png' %}" alt="">
                 </a>
             </div>
             <div class="top-social">
@@ -101,7 +102,7 @@
                         </div>
                     </div>
                 </div>
-                <img src="img/about-us.jpg" alt="">
+                <img src="{% static 'img/about-us.jpg' %}" alt="">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="about-us">
@@ -164,7 +165,7 @@
                                 <span>CEP’s Director</span>
                             </div>
                             <div class="author-pic">
-                                <img src="img/author-pic.png" alt="">
+                                <img src="{% static 'img/author-pic.png' %}" alt="">
                             </div>
                         </div>
                         <div class="ts-item">
@@ -182,7 +183,7 @@
                                 <span>CEP’s Director</span>
                             </div>
                             <div class="author-pic">
-                                <img src="img/author-pic.png" alt="">
+                                <img src="{% static 'img/author-pic.png' %}" alt="">
                             </div>
                         </div>
                         <div class="ts-item">
@@ -200,7 +201,7 @@
                                 <span>CEP’s Director</span>
                             </div>
                             <div class="author-pic">
-                                <img src="img/author-pic.png" alt="">
+                                <img src="{% static 'img/author-pic.png' %}" alt="">
                             </div>
                         </div>
                     </div>
@@ -225,7 +226,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="trainer-item">
                         <div class="ti-pic">
-                            <img src="img/trainer/trainer-1.jpg" alt="">
+                            <img src="{% static 'img/trainer/trainer-1.jpg' %}" alt="">
                             <div class="ti-links">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-pinterest"></i></a>
@@ -240,7 +241,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="trainer-item">
                         <div class="ti-pic">
-                            <img src="img/trainer/trainer-2.jpg" alt="">
+                            <img src="{% static 'img/trainer/trainer-2.jpg' %}" alt="">
                             <div class="ti-links">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-pinterest"></i></a>
@@ -255,7 +256,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="trainer-item">
                         <div class="ti-pic">
-                            <img src="img/trainer/trainer-3.jpg" alt="">
+                            <img src="{% static 'img/trainer/trainer-3.jpg' %}" alt="">
                             <div class="ti-links">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-pinterest"></i></a>
@@ -270,7 +271,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="trainer-item">
                         <div class="ti-pic">
-                            <img src="img/trainer/trainer-4.jpg" alt="">
+                            <img src="{% static 'img/trainer/trainer-4.jpg' %}" alt="">
                             <div class="ti-links">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-pinterest"></i></a>
@@ -310,7 +311,7 @@
                 <div class="col-lg-3">
                     <div class="footer-logo-item">
                         <div class="f-logo">
-                            <a href="#"><img src="img/logo.png" alt=""></a>
+                            <a href="#"><img src="{% static 'img/logo.png' %}" alt=""></a>
                         </div>
                         <p>Despite growth of the Internet over the past seven years, the use of toll-free phone numbers
                             in television advertising continues.</p>
@@ -394,15 +395,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/mixitup.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/mixitup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 
 </html>
