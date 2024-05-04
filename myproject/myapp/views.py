@@ -16,3 +16,5 @@ def main(request):
     return render(request, 'main.html')
 def schedule(request):
     return render(request, 'schedule.html')
+def blog_single(request):
+    return render(request, 'blog-single.html')

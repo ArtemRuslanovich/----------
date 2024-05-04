@@ -28,4 +28,5 @@ urlpatterns = [
     path('gallery.html', views.gallery, name='gallery.html'),
     path('main.html', views.main, name='main.html'),
     path('schedule.html', views.schedule, name='schedule.html'),
+    path('blog-single.html', views.blog_single, name='schedule.html')
 ]
