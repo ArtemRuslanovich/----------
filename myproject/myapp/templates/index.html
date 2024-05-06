@@ -9,7 +9,7 @@
     <meta name="keywords" content="Activitar, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Activitar | Template</title>
+    <title>Коннект</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800,900&display=swap" rel="stylesheet">
@@ -36,31 +36,30 @@
     <header class="header-section">
         <div class="container-fluid">
             <div class="logo">
-                <a href="./index">
+                <a href="./index.html">
                     <img src="{% static 'img/logo.png' %}" alt="">
                 </a>
             </div>
             <div class="top-social">
-                <a href="#"><i class="fa fa-pinterest-p"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <a href="#"><i class="fa fa-pinterest-p"></i></a>
-                <a href="#"><i class="fa fa-youtube-play"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-vk"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+                <a href="#"><i class="fa fa-telegram"></i></a>
+                <a href="https://www.instagram.com/connect_lida/?__d=1"><i class="fa fa-instagram"></i></a>
             </div>
             <div class="container">
                 <div class="nav-menu">
                     <nav class="mainmenu mobile-menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
-                            <li><a href="./about_us.html">About us</a></li>
-                            <li><a href="./schedule.html">Schedule</a></li>
-                            <li><a href="./gallery.html">Gallery</a></li>
-                            <li><a href="./blog.html">Blog</a>
+                            <li><a href="./index.html">Дом</a></li>
+                            <li class="active"><a href="./about_us.html">О нас</a></li>
+                            <li><a href="./schedule.html">Расписание</a></li>
+                            <li><a href="./gallery.html">Галерея</a></li>
+                            <li><a href="./blog.html">Блог</a>
                                 <ul class="dropdown">
-                                    <li><a href="./about_us.html">About Us</a></li>
+                                    <li><a href="./about_us.htmll">О нас</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./contact.html">Contacts</a></li>
+                            <li><a href="./contact.html">Контакты</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -115,6 +114,19 @@
         </div>
     </section>
     <!-- Hero End -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="cta-text">
+                        <h3>Забронируй ПК уже сейчас!</h3>
+                        <p>Мы всегда рады приветствовать игроков в нашем клубе!</p>
+                    </div>
+                    <a href="#" class="primary-btn cta-btn">Забронировать</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Feature Section Begin -->
     <section class="feature-section">
@@ -123,22 +135,16 @@
                 <div class="col-md-4">
                     <div class="feature-item set-bg" data-setbg="{% static 'img/feature/feature-1.jpg' %}">
                         <h3>Общий зал</h3>
-                        <p>Текст<br /> Текст</p>
-                        <a href="#" class="primary-btn f-btn">Узнать больше</a>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="feature-item set-bg" data-setbg="{% static 'img/feature/feature-2.jpg' %}">
-                        <h3>VIP комнаты</h3>
-                        <p>Текст<br /> Текст</p>
-                        <a href="#" class="primary-btn f-btn">Узнать больше</a>
+                        <h3>Буткемп</h3>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="feature-item set-bg" data-setbg="{% static 'img/feature/feature-3.jpg' %}">
                         <h3>Арена</h3>
-                        <p>Текст<br /> Текст</p>
-                        <a href="#" class="primary-btn f-btn">Узнать больше</a>
                     </div>
                 </div>
             </div>
@@ -155,7 +161,7 @@
                         <h2>КиберКлуб "КОННЕКТ"</h2>
                         <p class="short-details">Современное киберпространство в центре города с полным набором мощного игрового "железа".</p>
                         <p class="long-details">Это также:.</p>
-                        <a href="#" class="primary-btn about-btn">Learn More</a>
+                        <a href="#" class="primary-btn about-btn">Узнать больше</a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -170,7 +176,7 @@
 
     <!-- Classes Section Begin -->
     <section class="classes-section">
-        <div class="class-title set-bg" data-setbg="{% static 'img/classes-title-bg.jpg' %}">
+        <!-- <div class="class-title set-bg" data-setbg="{% static 'img/classes-title-bg.jpg' %}">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7 m-auto text-center">
@@ -181,7 +187,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
@@ -224,7 +230,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="section-title">
-                        <h2>Tекст</h2>
+                        <h2>Ивенты</h2>
                     </div>
                 </div>
             </div>
@@ -232,12 +238,12 @@
                 <div class="col-lg-12">
                     <div class="timetable-controls">
                         <ul>
-                            <li class="active" data-tsfilter="all">Tекст</li>
-                            <li data-tsfilter="crossfit">Tекст</li>
-                            <li data-tsfilter="lunge">Tекстт</li>
-                            <li data-tsfilter="ppsr">Tекст</li>
-                            <li data-tsfilter="walls">Tекст</li>
-                            <li data-tsfilter="candy">Tекст</li>
+                            <li class="active" data-tsfilter="all">Май</li>
+                            <li data-tsfilter="crossfit">Июнь</li>
+                            <li data-tsfilter="lunge">Июль</li>
+                            <li data-tsfilter="ppsr">Август</li>
+                            <li data-tsfilter="walls">Сентябрь</li>
+                            <li data-tsfilter="candy">Октябрь</li>
                         </ul>
                     </div>
                 </div>
@@ -247,13 +253,13 @@
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Tекст</th>
-                            <th>Tекст</th>
-                            <th>Tекст</th>
-                            <th>Tекст</th>
-                            <th>Tекст</th>
-                            <th>Tекст</th>
-                            <th>Tекст</th>
+                            <th>Понедельник</th>
+                            <th>Вторник</th>
+                            <th>Среда</th>
+                            <th>Четверг</th>
+                            <th>Пятница</th>
+                            <th>Суббота</th>
+                            <th>Воскресенье</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -397,14 +403,14 @@
                             <h2>от 5р <span>час</span></h2>
                         </div>
                         <ul>
-                            <li>видеокарта RTX 4060</li>
-                            <li>процессор i5 12600KF</li>
-                            <li>монитор AOC 24" 240hz</li>
-                            <li>мышь Logitech G102</li>
-                            <li>наушники HyperX Cloud 2</li>
-                            <li>клавиатура Red Square Keyrox TKL</li>
+                            <li>RTX 4060</li>
+                            <li>i5 12600KF</li>
+                            <li>AOC 24" 240hz</li>
+                            <li>Logitech G102</li>
+                            <li>HyperX Cloud 2</li>
+                            <li>Red Square Keyrox TKL</li>
                         </ul>
-                        <a href="#" class="primary-btn price-btn">Get Started</a>
+                        <a href="#" class="primary-btn price-btn">Забронировать</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -415,14 +421,14 @@
                             <p>Мониторы на кронштейне*</p>
                         </div>
                         <ul>
-                            <li>видеокарта: RTX 4060 Ti</li>
-                            <li>процессор: i5 13600KF</li>
-                            <li>монитор: ASUS 24" 280hz</li>
-                            <li>мышь: Razer Deathadder V3</li>
-                            <li>наушники: Logitech G Pro X</li>
-                            <li>клавиатура: Akko 5087S</li>
+                            <li>RTX 4060 Ti</li>
+                            <li>i5 13600KF</li>
+                            <li>ASUS 24" 280hz</li>
+                            <li>Razer Deathadder V3</li>
+                            <li>Logitech G Pro X</li>
+                            <li>Akko 5087S</li>
                         </ul>
-                        <a href="#" class="primary-btn price-btn">Get Started</a>
+                        <a href="#" class="primary-btn price-btn">Забронировать</a>
                         <div class="tic-text">
                             <i class="fa fa-star"></i>
                         </div>
@@ -443,7 +449,7 @@
                             <li>HyperX Cloud Alpha S</li>
                             <li>Akko 5087S</li>
                         </ul>
-                        <a href="#" class="primary-btn price-btn">Get Started</a>
+                        <a href="#" class="primary-btn price-btn">Забронировать</a>
                     </div>
                 </div>
             </div>
@@ -578,44 +584,13 @@
     <!-- Blog Section End -->
 
     <!-- Cta Section Begin -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="cta-text">
-                        <h3>Забронируй ПК уже сейчас!</h3>
-                        <p>Мы всегда рады приветствовать игроков в нашем клубе!</p>
-                    </div>
-                    <a href="#" class="primary-btn cta-btn">Tекст</a>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!-- Cta Section End -->
 
     <!-- Map Section Begin -->
     <div class="map">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1287.5205993210573!2d25.294507132535465!3d53.8951268657207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46de8b03efd35e9b%3A0xf1dba2fecb22ee85!2sKiberklub%20Konnekt!5e0!3m2!1sen!2sbd!4v1714833689739!5m2!1sen!2sbd" height="590" style="border: 0" allowfullscreen=""></iframe>
-        <div class="map-contact-detalis">
-            <div class="open-time">
-                <h5>Tекст:</h5>
-                <ul>
-                    <li>Tекст: <span>06:30 - 11:00</span></li>
-                    <li>Tекст: <span>07:00 - 22:00</span></li>
-                    <li>Tекст: <span>09:00 - 18:00</span></li>
-                </ul>
-            </div>
-            <div class="map-contact-form">
-                <h5>Contact Us</h5>
-                <form action="#">
-                    <input type="text" placeholder="Name">
-                    <input type="text" class="phone" placeholder="Phone">
-                    <textarea placeholder="Message"></textarea>
-                    <button type="submit" class="site-btn">Tекст</button>
-                </form>
-            </div>
-        </div>
     </div>
     <!-- Map Section End -->
 
@@ -630,12 +605,11 @@
                         </div>
                         <p>Tекст.</p>
                         <div class="social-links">
-                            <h6>Follow us</h6>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <h6>Следите за нами</h6>
+                            <a href="#"><i class="fa fa-vk"></i></a>
+                            <a href="#"><i class="fa fa-youtube"></i></a>
+                            <a href="#"><i class="fa fa-telegram"></i></a>
+                            <a href="https://www.instagram.com/connect_lida/?__d=1"><i class="fa fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
@@ -653,21 +627,21 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="footer-widget">
-                        <h5>Get Info</h5>
+                        <h5>Информация</h5>
                         <ul class="footer-info">
                             <li>
                                 <i class="fa fa-phone"></i>
-                                <span>Phone:</span>
+                                <span>Телефон:</span>
                                 (12) 345 6789
                             </li>
                             <li>
                                 <i class="fa fa-envelope-o"></i>
-                                <span>Email:</span>
+                                <span>Почта:</span>
                                 Tекст
                             </li>
                             <li>
                                 <i class="fa fa-map-marker"></i>
-                                <span>Address</span>
+                                <span>Адрес</span>
                                 Tекст
                             </li>
                         </ul>
@@ -675,17 +649,7 @@
                 </div>
             </div>
         </div>
-        <div class="copyright-text">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <div class="ct-inside"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </footer>
     <!-- Footer Section End -->
 
