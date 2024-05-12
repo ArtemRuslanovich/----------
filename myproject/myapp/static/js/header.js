@@ -1,4 +1,4 @@
-var header = document.getElementById("header");
+var header = document.getElementById("header-section");
 
 // Получаем позицию элемента header относительно верха документа
 var sticky = header.offsetTop;
