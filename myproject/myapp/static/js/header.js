@@ -1,18 +1,16 @@
-var header = document.getElementById("header-section");
-
-// Получаем позицию элемента header относительно верха документа
-var sticky = header.offsetTop;
-
-// Функция, которая будет вызываться при прокрутке страницы
-function stickyHeader() {
-    if (window.pageYOffset > sticky) {
+window.onload = function() {
+    var header = document.getElementById("header-section");
+    var sticky = header.offsetTop;
+  
+    function stickyHeader() {
+      if (window.pageYOffset > sticky) {
         header.classList.add("fixed");
-    } else {
+      } else {
         header.classList.remove("fixed");
+      }
     }
-}
-
-// Добавляем обработчик прокрутки страницы
-window.onscroll = function() {
-    stickyHeader();
-};
+  
+    window.onscroll = function() {
+      stickyHeader();
+    };
+  };

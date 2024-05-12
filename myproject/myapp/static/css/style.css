@@ -324,14 +324,17 @@ ol {
 
 .header-section {
 	padding-top: 40px;
-	position: fixed;
+	position: fixed; /* Move fixed styles here */
 	left: 0;
 	top: 0;
 	width: 100%;
 	z-index: 99;
 	padding-left: 60px;
 	padding-right: 60px;
-}
+	background-color: #151515; /* Adjust as needed for normal state */
+	transition: background-color 0.3s ease; /* Animation */
+  }
+  
 
 .header-section.header-normal {
 	position: relative;
@@ -370,11 +373,7 @@ ol {
 	padding: 39px 0;
 }
 
-.header-section.fixed {
-    background-color: #555;
-    padding: 5px 20px;
-    transition: background-color 0.3s ease; /* Добавляем плавную анимацию */
-}
+
 
 .logo {
 	float: left;
