@@ -23,10 +23,8 @@ urlpatterns = [
     path('', views.index, name='index.html'),
     path('index.html', views.index, name='index.html'),
     path('about_us.html', views.about_us, name='about_us.html'),  # Добавьте эту строку
-    path('blog.html', views.blog, name='blog.html'),
     path('contact.html', views.contact, name='contact.html'),
     path('gallery.html', views.gallery, name='gallery.html'),
     path('main.html', views.main, name='main.html'),
     path('schedule.html', views.schedule, name='schedule.html'),
-    path('blog-single.html', views.blog_single, name='schedule.html')
 ]
