@@ -370,6 +370,12 @@ ol {
 	padding: 39px 0;
 }
 
+.header-section.fixed {
+    background-color: #555;
+    padding: 5px 20px;
+    transition: background-color 0.3s ease; /* Добавляем плавную анимацию */
+}
+
 .logo {
 	float: left;
 }
