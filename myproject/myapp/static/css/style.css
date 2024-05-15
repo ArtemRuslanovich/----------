@@ -70,7 +70,7 @@ h6 {
 
 p {
 	font-size: 16px;
-	font-family: "Nunito Sans", unbounded;
+	font-family: "Nunito Sans", sans-serif;
 	color: #8f8fa8;
 	font-weight: 400;
 	line-height: 24px;
@@ -152,7 +152,7 @@ ol {
 .primary-btn {
 	display: inline-block;
 	font-size: 14px;
-	font-family: "Furore", unbounded;
+	font-family: "Furore", sans-serif;
 	font-weight: 600;
 	padding: 0 12px;
 	color: #ffffff;
@@ -203,7 +203,7 @@ ol {
 .site-btn {
 	display: inline-block;
 	font-size: 12px;
-	font-family: "Furore", unbounded;
+	font-family: "Furore", sans-serif;
 	font-weight: 600;
 	padding: 0 12px;
 	color: #000000;
@@ -420,7 +420,7 @@ ol {
 	-o-transition: 0.3s;
 	transition: 0.3s;
 	display: block;
-	font-family: "Furore", unbounded;
+	font-family: "Furore", sans-serif;
 	-webkit-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
@@ -610,7 +610,7 @@ ol {
 .single-hero-item .hero-text h2 {
 	color: #ffffff;
 	text-transform: uppercase;
-	font-family: "Nunito Sans", unbounded;
+	font-family: "Nunito Sans", sans-serif;
 	font-size: 60px;
 	margin-bottom: 4px;
 	position: relative;
@@ -823,7 +823,7 @@ ol {
 	list-style: none;
 	font-size: 16px;
 	font-weight: 600;
-	font-family: "Furore", unbounded;
+	font-family: "Furore", sans-serif;
 	text-transform: uppercase;
 	color: #ffffff;
 	display: inline-block;
@@ -881,7 +881,7 @@ ol {
 	color: #ffffff;
 	font-weight: 500;
 	text-transform: uppercase;
-	font-family: "Furore", unbounded;
+	font-family: "Furore", sans-serif;
 	padding: 25px 5px;
 }
 
@@ -928,7 +928,7 @@ ol {
 	font-size: 16px;
 	color: #ffffff;
 	font-weight: 500;
-	font-family: "Furore", unbounded;
+	font-family: "Furore", sans-serif;
 }
 
 .classtime-table table tbody tr td span {
@@ -974,7 +974,7 @@ ol {
 	list-style: none;
 	display: inline-block;
 	font-size: 16px;
-	font-family: "Furore", unbounded;
+	font-family: "Furore", sans-serif;
 	color: #ffffff;
 	letter-spacing: 1px;
 	margin-right: 10px;
@@ -1075,7 +1075,7 @@ ol {
 	font-size: 16px;
 	line-height: 20px;
 	color: #272727;
-	font-family: "Furore", unbounded;
+	font-family: "Furore", sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
@@ -1637,7 +1637,7 @@ ol {
 .footer-widget .workout-program li a {
 	display: block;
 	font-size: 16px;
-	font-family: "Furore", unbounded;
+	font-family: "Furore", sans-serif;
 	font-weight: 500;
 	color: #ffffff;
 	line-height: 18px;
@@ -1664,7 +1664,7 @@ ol {
 .footer-widget .footer-info li span {
 	color: #ffffff;
 	display: block;
-	font-family: "Furore", unbounded;
+	font-family: "Furore", sans-serif;
 	font-weight: 500;
 }
 
@@ -1815,7 +1815,7 @@ ol {
 .testimonial-slider .ts-item h4 {
 	color: #ffffff;
 	line-height: 34px;
-	font-family: "Nunito Sans", unbounded;
+	font-family: "Nunito Sans", sans-serif;
 	margin-bottom: 20px;
 }
 
@@ -1954,7 +1954,7 @@ ol {
 .trainer-item .ti-pic .trainer-text h5 span {
 	font-size: 14px;
 	color: #ffffff;
-	font-family: "Nunito Sans", unbounded;
+	font-family: "Nunito Sans", sans-serif;
 }
 
 /*---------------------
@@ -1976,7 +1976,7 @@ ol {
 	list-style: none;
 	font-size: 16px;
 	font-weight: 500;
-	font-family: "Furore", unbounded;
+	font-family: "Furore", sans-serif;
 	text-transform: uppercase;
 	color: #ffffff;
 	display: inline-block;
@@ -2103,7 +2103,7 @@ ol {
 }
 
 .gallery-item .gi-hover h6 span {
-	font-family: "Nunito Sans", unbounded;
+	font-family: "Nunito Sans", sans-serif;
 	margin-top: 7px;
 	display: block;
 }
@@ -2651,7 +2651,7 @@ ol {
 	background: linear-gradient(45deg, #57c0fd, #00A3FF);
 	padding: 10px 47px;
 	border: none;
-	font-family: "Furore", unbounded;
+	font-family: "Furore", sans-serif;
 	border: 1px solid #000000;
 	border-radius: 2px;
 }
@@ -2877,7 +2877,7 @@ ol {
 	background: linear-gradient(45deg, #57c0fd, #00A3FF);
 	padding: 12px 40px;
 	border: none;
-	font-family: "Furore", unbounded;
+	font-family: "Furore", sans-serif;
 	border: 1px solid #000000;
 	border-radius: 2px;
 }
