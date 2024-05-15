@@ -20,11 +20,11 @@ from django.urls import path
 from myapp import views
 
 urlpatterns = [
-    path('', views.index, name='index.html'),
-    path('index.html', views.index, name='index.html'),
-    path('about_us.html', views.about_us, name='about_us.html'),  # Добавьте эту строку
-    path('contact.html', views.contact, name='contact.html'),
-    path('gallery.html', views.gallery, name='gallery.html'),
-    path('main.html', views.main, name='main.html'),
-    path('schedule.html', views.schedule, name='schedule.html'),
+    path('', views.index, name='index'),
+    path('index', views.index, name='index'),
+    path('about_us', views.about_us, name='about_us'), 
+    path('contact', views.contact, name='contact'),
+    path('gallery', views.gallery, name='gallery'),
+    path('main', views.main, name='main'),
+    path('schedule', views.schedule, name='schedule'),
 ]
