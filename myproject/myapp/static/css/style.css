@@ -154,12 +154,12 @@ ol {
 	font-size: 14px;
 	font-family: "Furore", unbounded;
 	font-weight: 600;
-	padding: 0 12px;
+	padding: 0 1px;
 	color: #ffffff;
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	text-align: center;
-	width: 160px;
+	width: 181px;
 	height: 46px;
 	border-left: 2px solid #57c0fd;
 	border-right: 2px solid #00A3FF;
@@ -1067,7 +1067,7 @@ ol {
 	font-size: 18px;
 	font-weight: 700;
 	position: absolute;
-	left: -17px;
+	left: -32px;
 	top: 9px;
 }
 
@@ -1573,7 +1573,7 @@ ol {
 	color: #ffffff;
 	font-weight: 500;
 	text-transform: uppercase;
-	margin-bottom: 20px;
+	margin-bottom: -2px;
 }
 
 .footer-logo-item .social-links a {
