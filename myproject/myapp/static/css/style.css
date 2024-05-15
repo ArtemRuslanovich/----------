@@ -27,7 +27,7 @@
 html,
 body {
 	height: 100%;
-	font-family: "Furore", sans-serif;
+	font-family: "Furore";
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 }
@@ -41,7 +41,7 @@ h6 {
 	margin: 0;
 	color: #111111;
 	font-weight: 400;
-	font-family: "Oswald", sans-serif;
+	font-family: "Furore";
 }
 
 h1 {
