@@ -80,6 +80,9 @@ p {
 img {
 	max-width: 50%;
 }
+img.small {
+	max-width: 24%;
+}
 
 input:focus,
 select:focus,
@@ -3129,7 +3132,6 @@ ol {
 
 	.modal-content {
 		position: relative;
-		background-color: #fefefe;
 		margin: auto;
 		padding: 0;
 		border: 1px solid #888;
