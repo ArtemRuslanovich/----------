@@ -73,13 +73,26 @@
                     <nav class="mainmenu mobile-menu">
                         <ul>
                             <li class="active"><a href="./about_us">О нас</a></li>
-                            <li class="active"><a href="#">Цены</a></li>
+                            <li class="active"><a href="#" id="openModal">Цены</a></li>
                             <li><a href="./schedule">Расписание</a></li>
                             <li class="active"><a href="#">Акции</a></li>
                             <li><a href="./gallery">Галерея</a></li>
 
                             <li><a href="./contact">Контакты</a></li>
                         </ul>
+                        <div id="myModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <div class="gallery">
+                                    <img src="{% static 'img/price-1.png' %}" alt="Image 1">
+                                    <img src="{% static 'img/price-2.png' %}" alt="Image 2">
+                                    <img src="{% static 'img/price-3.png' %}" alt="Image 3">
+                                    <img src="{% static 'img/price-4.png' %}" alt="Image 3">
+                                    <!-- Добавьте больше изображений по необходимости -->
+                                </div>
+                            </div>
+                        </div>
+                    
                     </nav>
                 </div>
             </div>
@@ -632,7 +645,7 @@
                 <div class="col-lg-2">
                     <div class="footer-widget">
                         <ul class="workout-program">
-                            <li><a href="#">Цены</a></li>
+                            <li class="active"><a href="#" id="openModal">Цены</a></li>
                             <li><a href="#">Меню</a></li>
                             <li><a href="#">Игры</a></li>
                             <li><a href="#">Акции</a></li>
@@ -678,6 +691,7 @@
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
     <script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/modal.js' %}"></script>
 </body>
 
 </html>
