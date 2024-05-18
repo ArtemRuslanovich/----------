@@ -55,11 +55,11 @@
                     <nav class="mainmenu mobile-menu">
                         <ul>
                             <li class="active"><a href="./home">О нас</a></li>
-                            <li class="active"><a href="#price-section spad set-bg" >Цены</a></li>
+                            <li class="active"><a href="#price-plan" >Цены</a></li>
                             <li><a href="./schedule">Расписание</a></li>
                             <li><a href="./gallery">Галерея</a></li>
 
-                            <li><a href="#col-lg-3">Контакты</a></li>
+                            <li><a href="#сontacts">Контакты</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -372,75 +372,77 @@
     <!-- Class Time Section End -->
 
     <!-- Price Plan Section Begin -->
-    <section class="price-section spad set-bg" data-setbg="{% static 'img/price-bg.jpg' %}">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <h2>Цены</h2>
+    <section id="price-plan">
+        <section class="price-section spad set-bg" data-setbg="{% static 'img/price-bg.jpg' %}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title">
+                            <h2>Цены</h2>
 
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="single-price-plan">
+                            <h4>Стандарт</h4>
+                            <div class="price-plan">
+                                <h2>от 5р <span>час</span></h2>
+                            </div>
+                            <ul>
+                                <li>RTX 4060</li>
+                                <li>i5 12600KF</li>
+                                <li>AOC 24" 240hz</li>
+                                <li>Logitech G102</li>
+                                <li>HyperX Cloud 2</li>
+                                <li>Red Square Keyrox TKL</li>
+                            </ul>
+                            <a href="https://www.instagram.com/connect_lida/" class="primary-btn price-btn">Забронировать</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-price-plan">
+                            <h4>Буткемп</h4>
+                            <div class="price-plan">
+                                <h2>от 6р <span>час</span></h2>
+                                <p>Мониторы на кронштейне*</p>
+                            </div>
+                            <ul>
+                                <li>RTX 4060 Ti</li>
+                                <li>i5 13600KF</li>
+                                <li>ASUS 24" 280hz</li>
+                                <li>Razer Deathadder V3</li>
+                                <li>Logitech G Pro X</li>
+                                <li>Akko 5087S</li>
+                            </ul>
+                            <a href="https://www.instagram.com/connect_lida/" class="primary-btn price-btn">Забронировать</a>
+                            <div class="tic-text">
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-price-plan">
+                            <h4>Арена</h4>
+                            <div class="price-plan">
+                                <h2>от 7р <span>час</span></h2>
+                                <p>Мониторы на кронштейне*</p>
+                            </div>
+                            <ul>
+                                <li>RTX 4070</li>
+                                <li>i7 13700F</li>
+                                <li>Acer 24" 390hz</li>
+                                <li>Razer Deathadder V3</li>
+                                <li>HyperX Cloud Alpha S</li>
+                                <li>Akko 5087S</li>
+                            </ul>
+                            <a href="https://www.instagram.com/connect_lida/" class="primary-btn price-btn">Забронировать</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="single-price-plan">
-                        <h4>Стандарт</h4>
-                        <div class="price-plan">
-                            <h2>от 5р <span>час</span></h2>
-                        </div>
-                        <ul>
-                            <li>RTX 4060</li>
-                            <li>i5 12600KF</li>
-                            <li>AOC 24" 240hz</li>
-                            <li>Logitech G102</li>
-                            <li>HyperX Cloud 2</li>
-                            <li>Red Square Keyrox TKL</li>
-                        </ul>
-                        <a href="https://www.instagram.com/connect_lida/" class="primary-btn price-btn">Забронировать</a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-price-plan">
-                        <h4>Буткемп</h4>
-                        <div class="price-plan">
-                            <h2>от 6р <span>час</span></h2>
-                            <p>Мониторы на кронштейне*</p>
-                        </div>
-                        <ul>
-                            <li>RTX 4060 Ti</li>
-                            <li>i5 13600KF</li>
-                            <li>ASUS 24" 280hz</li>
-                            <li>Razer Deathadder V3</li>
-                            <li>Logitech G Pro X</li>
-                            <li>Akko 5087S</li>
-                        </ul>
-                        <a href="https://www.instagram.com/connect_lida/" class="primary-btn price-btn">Забронировать</a>
-                        <div class="tic-text">
-                            <i class="fa fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-price-plan">
-                        <h4>Арена</h4>
-                        <div class="price-plan">
-                            <h2>от 7р <span>час</span></h2>
-                            <p>Мониторы на кронштейне*</p>
-                        </div>
-                        <ul>
-                            <li>RTX 4070</li>
-                            <li>i7 13700F</li>
-                            <li>Acer 24" 390hz</li>
-                            <li>Razer Deathadder V3</li>
-                            <li>HyperX Cloud Alpha S</li>
-                            <li>Akko 5087S</li>
-                        </ul>
-                        <a href="https://www.instagram.com/connect_lida/" class="primary-btn price-btn">Забронировать</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
     </section>
     <!-- Price Plan Section End -->
 
@@ -574,68 +576,70 @@
     <!-- Cta Section End -->
 
     <!-- Map Section Begin -->
-    <div class="map">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1287.5205993210573!2d25.294507132535465!3d53.8951268657207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46de8b03efd35e9b%3A0xf1dba2fecb22ee85!2sKiberklub%20Konnekt!5e0!3m2!1sen!2sbd!4v1714833689739!5m2!1sen!2sbd" height="590" style="border: 0" allowfullscreen=""></iframe>
-    </div>
-    <!-- Map Section End -->
+    <section id="сontacts">
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1287.5205993210573!2d25.294507132535465!3d53.8951268657207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46de8b03efd35e9b%3A0xf1dba2fecb22ee85!2sKiberklub%20Konnekt!5e0!3m2!1sen!2sbd!4v1714833689739!5m2!1sen!2sbd" height="590" style="border: 0" allowfullscreen=""></iframe>
+        </div>
+        <!-- Map Section End -->
 
-    <!-- Footer Section Begin -->
-    <footer class="footer-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="footer-logo-item">
-                        <a href="./home">
-                            <img src="{% static 'img/logo.png' %}" alt="">
-                        </a>
-                        
-                        <div class="social-links">
-                            <h6>Следите за нами</h6>
-                            <a href="https://www.instagram.com/connect_lida/"><i class="fa fa-instagram"></i></a>
-                            <a href="https://t.me/connect_lida"><i class="fa fa-telegram"></i></a>
-                            <a href="https://vk.com/connect_lida"><i class="fa fa-vk"></i></a>
-                            <a href="https://www.youtube.com/@connectcyberclub"><i class="fa fa-youtube"></i></a>
+        <!-- Footer Section Begin -->
+        <footer class="footer-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="footer-logo-item">
+                            <a href="./home">
+                                <img src="{% static 'img/logo.png' %}" alt="">
+                            </a>
+                            
+                            <div class="social-links">
+                                <h6>Следите за нами</h6>
+                                <a href="https://www.instagram.com/connect_lida/"><i class="fa fa-instagram"></i></a>
+                                <a href="https://t.me/connect_lida"><i class="fa fa-telegram"></i></a>
+                                <a href="https://vk.com/connect_lida"><i class="fa fa-vk"></i></a>
+                                <a href="https://www.youtube.com/@connectcyberclub"><i class="fa fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="footer-widget">
+                            <ul class="workout-program">
+                                <li><a href="#">Цены</a></li>
+                                <li><a href="#">Меню</a></li>
+                                <li><a href="#">Игры</a></li>
+                                <li><a href="#">Акции</a></li>
+                                <li><a href="#">Правила</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="footer-widget">
+                            <h5>Информация</h5>
+                            <ul class="footer-info">
+                                <li>
+                                    <i class="fa fa-phone" style="left: 85px !important; top: 9px !important;"></i>
+                                    <span>Телефон:</span>
+                                    +375336000315
+                                </li>
+                                <li>
+                                    <i class="fa fa-envelope-o" style="left: 85px !important; top: 9px !important;"></i>
+                                    <span>Почта:</span>
+                                    Tекст
+                                </li>
+                                <li>
+                                    <i class="fa fa-map-marker" style="left: 85px !important; top: 9px !important;"></i>
+                                    <span>Адрес</span>
+                                    ул. Адама Мицкевича, 16, Lida
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2">
-                    <div class="footer-widget">
-                        <ul class="workout-program">
-                            <li><a href="#">Цены</a></li>
-                            <li><a href="#">Меню</a></li>
-                            <li><a href="#">Игры</a></li>
-                            <li><a href="#">Акции</a></li>
-                            <li><a href="#">Правила</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="footer-widget">
-                        <h5>Информация</h5>
-                        <ul class="footer-info">
-                            <li>
-                                <i class="fa fa-phone" style="left: 85px !important; top: 9px !important;"></i>
-                                <span>Телефон:</span>
-                                +375336000315
-                            </li>
-                            <li>
-                                <i class="fa fa-envelope-o" style="left: 85px !important; top: 9px !important;"></i>
-                                <span>Почта:</span>
-                                Tекст
-                            </li>
-                            <li>
-                                <i class="fa fa-map-marker" style="left: 85px !important; top: 9px !important;"></i>
-                                <span>Адрес</span>
-                                ул. Адама Мицкевича, 16, Lida
-                            </li>
-                        </ul>
-                    </div>
-                </div>
             </div>
-        </div>
 
-    </footer>
+        </footer>
+    </section>
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
