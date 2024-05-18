@@ -22,9 +22,6 @@ from myapp import views
 urlpatterns = [
     path('', views.index, name='home'),
     path('home', views.index, name='home'),
-    path('about_us', views.about_us, name='about_us'), 
-    path('contact', views.contact, name='contact'),
     path('gallery', views.gallery, name='gallery'),
-    path('main', views.main, name='main'),
     path('schedule', views.schedule, name='schedule'),
 ]
