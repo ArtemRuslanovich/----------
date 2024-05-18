@@ -27,6 +27,22 @@
     <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('a[href^="connectlida.by//home#price-plan"]').on('click', function(event) {
+                var target = $(this.getAttribute('href').split('#')[1]);
+                if(target.length) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top
+                    }, 1000); // Время анимации в миллисекундах (1000 мс = 1 секунда)
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
