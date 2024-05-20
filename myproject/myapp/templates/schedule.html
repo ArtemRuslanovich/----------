@@ -145,29 +145,52 @@
 
             function populateTable(data) {
                 const tbody = document.querySelector('tbody');
-                data.slice(1).forEach((row, i) => {
+
+                // Add headers for each time slot
+                const timeSlots = [];
+                data.slice(1).forEach(row => {
+                    if (!timeSlots.includes(row[0])) {
+                        timeSlots.push(row[0]);
+                    }
+                });
+
+                // Initialize table structure based on time slots
+                timeSlots.forEach(time => {
                     const tr = document.createElement('tr');
-                    row.forEach((cell, j) => {
+                    const timeTd = document.createElement('td');
+                    timeTd.className = 'workout-time';
+                    timeTd.textContent = time;
+                    tr.appendChild(timeTd);
+
+                    for (let i = 0; i < 7; i++) {
                         const td = document.createElement('td');
                         td.className = 'hover-bg ts-item';
-                        if (j === 0) {
-                            td.classList.add('workout-time');
-                            td.textContent = cell || '';
-                        } else {
-                            if (cell) {
-                                const [timeRange, event] = cell.split(' (');
-                                const span = document.createElement('span');
-                                span.textContent = timeRange;
-                                const h6 = document.createElement('h6');
-                                h6.textContent = event ? event.replace(')', '') : 'Текст';
-                                td.setAttribute('data-tsmeta', event ? event.replace(')', '') : 'default');
-                                td.appendChild(span);
-                                td.appendChild(h6);
-                            }
-                        }
                         tr.appendChild(td);
-                    });
+                    }
+
                     tbody.appendChild(tr);
+                });
+
+                // Populate the table with data
+                data.slice(1).forEach(row => {
+                    const time = row[0];
+                    const dayIndex = row.findIndex((_, index) => index > 0 && row[index]);
+
+                    if (dayIndex !== -1) {
+                        const tr = Array.from(tbody.children).find(tr => tr.children[0].textContent === time);
+                        if (tr) {
+                            const td = tr.children[dayIndex];
+                            const cell = row[dayIndex];
+                            const [timeRange, event] = cell.split(' (');
+                            const span = document.createElement('span');
+                            span.textContent = timeRange;
+                            const h6 = document.createElement('h6');
+                            h6.textContent = event ? event.replace(')', '') : 'Текст';
+                            td.setAttribute('data-tsmeta', event ? event.replace(')', '') : 'default');
+                            td.appendChild(span);
+                            td.appendChild(h6);
+                        }
+                    }
                 });
             }
         });
