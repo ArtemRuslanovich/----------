@@ -865,6 +865,7 @@ ol {
 }
 
 .classtime-table.filtering .ts-item {
+	color: #ffffff;
 	opacity: 0;
 }
 
