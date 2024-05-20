@@ -143,7 +143,7 @@
                     populateTable(json);
                 });
 
-                function populateTable(data) {
+            function populateTable(data) {
                 const tbody = document.querySelector('tbody');
                 data.slice(1).forEach((row, i) => {
                     const tr = document.createElement('tr');
@@ -152,16 +152,17 @@
                         td.className = 'hover-bg ts-item';
                         if (j === 0) {
                             td.classList.add('workout-time');
-                        }
-                        if (cell) {
+                            td.textContent = cell || '';
+                        } else if (cell) {
+                            const [timeRange, event] = cell.split(' (');
                             const span = document.createElement('span');
-                            span.textContent = cell;
+                            span.textContent = timeRange;
                             const h6 = document.createElement('h6');
-                            h6.textContent = 'Текст'; // Замените на фактический текст события, если необходимо
+                            h6.textContent = event ? event.replace(')', '') : 'Текст'; // Если нет данных, можно указать 'Текст'
+                            td.setAttribute('data-tsmeta', event ? event.replace(')', '') : 'default'); // Установка атрибута data-tsmeta
                             td.appendChild(span);
                             td.appendChild(h6);
                         }
-                        td.textContent = cell || '';
                         tr.appendChild(td);
                     });
                     tbody.appendChild(tr);
