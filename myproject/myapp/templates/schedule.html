@@ -143,12 +143,24 @@
                     populateTable(json);
                 });
 
-            function populateTable(data) {
+                function populateTable(data) {
                 const tbody = document.querySelector('tbody');
                 data.slice(1).forEach((row, i) => {
                     const tr = document.createElement('tr');
                     row.forEach((cell, j) => {
-                        const td = document.createElement(j === 0 ? 'th' : 'td');
+                        const td = document.createElement('td');
+                        td.className = 'hover-bg ts-item';
+                        if (j === 0) {
+                            td.classList.add('workout-time');
+                        }
+                        if (cell) {
+                            const span = document.createElement('span');
+                            span.textContent = cell;
+                            const h6 = document.createElement('h6');
+                            h6.textContent = 'Текст'; // Замените на фактический текст события, если необходимо
+                            td.appendChild(span);
+                            td.appendChild(h6);
+                        }
                         td.textContent = cell || '';
                         tr.appendChild(td);
                     });
