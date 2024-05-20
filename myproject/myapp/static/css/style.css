@@ -1649,10 +1649,10 @@ ol {
 
 .footer-widget .footer-info li {
 	list-style: none;
-	font-size: 16px;
+	font-size: 14px;
 	color: #afb4bf;
 	position: relative;
-	padding-left: 35px;
+	padding-left: 0px;
 	margin-bottom: 20px;
 }
 
@@ -1660,7 +1660,7 @@ ol {
 	position: absolute;
 	left: 0;
 	top: 0;
-	font-size: 24px;
+	font-size: 20px;
 	color: #00A3FF;
 }
 
