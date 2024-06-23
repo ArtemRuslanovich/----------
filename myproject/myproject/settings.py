@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ec-t3y&w5q+j9xf-=e3urgij47e0csuy7)oxrer@$)a@adre&2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["web-btf0zmfepf3f.up-de-fra1-k8s-1.apps.run-on-seenode.com"]
+ALLOWED_HOSTS = ["connectlida.by"]
 
 
 # Application definition
