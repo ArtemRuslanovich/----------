@@ -1,19 +1,17 @@
-
-document.addEventListener("DOMContentLoaded", function() {
-    // Ваш код здесь
-    document.getElementById("menu-btn").addEventListener("click", function(event) {
+$(document).ready(function() {
+    $("#menu-btn").click(function(event) {
         event.preventDefault();
-        document.getElementById("menu-photo").style.display = "flex";
-        document.getElementById("overlay").style.display = "block";
+        $("#menu-photo").css("display", "flex");
+        $("#overlay").css("display", "block");
     });
 
-    document.getElementById("overlay").addEventListener("click", function() {
-        document.getElementById("menu-photo").style.display = "none";
-        this.style.display = "none";
+    $("#overlay").click(function() {
+        $("#menu-photo").css("display", "none");
+        $(this).css("display", "none");
     });
 
-    document.getElementById("menu-photo").addEventListener("click", function() {
-        this.style.display = "none";
-        document.getElementById("overlay").style.display = "none";
+    $("#menu-photo").click(function() {
+        $(this).css("display", "none");
+        $("#overlay").css("display", "none");
     });
 });
