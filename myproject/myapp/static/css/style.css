@@ -1561,7 +1561,7 @@ ol {
 -----------------------*/
 
 .menu-photo, .overlay {
-    display: none;  /* Скрытие элементов по умолчанию */
+    display: none;  /* Скрываем элементы по умолчанию */
     position: fixed;
     top: 0;
     left: 0;
