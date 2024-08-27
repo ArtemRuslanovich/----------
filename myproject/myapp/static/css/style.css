@@ -715,7 +715,15 @@ ol {
 	color: #ffffff;
 	line-height: 28px;
 	margin-bottom: 20px;
-    list-style-type: disc; /* Опционально, для добавления маркеров списка */
+}
+
+.about-text p.short-details, .about-text p.short-details li {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff; /* Белый цвет */
+    line-height: 28px;
+    margin-bottom: 20px;
+    list-style-type: disc;
 }
 
 .about-text p.long-details {
@@ -1552,13 +1560,16 @@ ol {
   Footer Section
 -----------------------*/
 
-.menu-photo {
-    display: none;
+.menu-photo, .overlay {
+    display: none;  /* Скрытие элементов по умолчанию */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.menu-photo {
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 1001;
     display: flex;
@@ -1573,12 +1584,6 @@ ol {
 }
 
 .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1000;
 }
