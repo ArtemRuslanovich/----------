@@ -454,7 +454,7 @@
                 <div class="col-lg-12">
                     <div class="video-text">
                         <h2>Больше о нас</h2>
-                        <a href="https://www.youtube.com/watch?v=X_9VoqR5ojM" class="play-btn video-popup">
+                        <a target="_blank" href="https://www.instagram.com/reel/C5QuAkfoud7/?igsh=bGtrMjA5NTI4bzN0">
                             <i class="fa fa-play"></i>
                         </a>
                     </div>
@@ -516,7 +516,7 @@
                                 <h5>Fortnite</h5>
                             </a>
                             <div class="play-btn">
-                                <a href="https://www.instagram.com/reel/C5QuAkfoud7/?igsh=bGtrMjA5NTI4bzN0" class="play-in-btn video-popup">
+                                <atarget="_blank" href="https://www.instagram.com/reel/C5QuAkfoud7/?igsh=bGtrMjA5NTI4bzN0">
                                     <i class="fa fa-play"></i>
                                 </a>
                             </div>
@@ -574,11 +574,16 @@
                         <div class="footer-widget">
                             <ul class="workout-program">
                                 <li><a href="#price-plan">Цены</a></li>
-                                <li><a href="#">Меню</a></li>
+                                <li><a href="#" id="menu-btn">Меню</a></li>
                                 <li><a href="#games">Игры</a></li>
                                 <li><a href="#">Акции</a></li>
                                 <li><a href="#">Правила</a></li>
                             </ul>
+                        </div>
+                        
+                        <div id="overlay" class="overlay"></div>
+                        <div id="menu-photo" class="menu-photo">
+                            <img src="your-image.jpg" alt="Меню">
                         </div>
                     </div>
                     <div class="col-lg-3 offset-lg-1">
@@ -620,6 +625,7 @@
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
     <script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/menu.js' %}"></script>
 </body>
 
 </html>
