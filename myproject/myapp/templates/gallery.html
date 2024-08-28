@@ -246,7 +246,7 @@
                         <div class="footer-logo-item">
                             <div class="f-logo">
                                 <a href="./home">
-                                    <img src="{% static 'img/logo.png' %}" alt="">
+                                    <img src="{% static 'img/logo.png' %}" alt="Logo">
                                 </a>
                             </div>
                             <p></p>
@@ -259,6 +259,7 @@
                             </div>
                         </div>
                     </div>
+        
                     <div class="col-lg-2">
                         <div class="footer-widget">
                             <ul class="workout-program">
@@ -269,39 +270,13 @@
                                 <li><a href="./rules">Правила</a></li>
                             </ul>
                         </div>
-                        
-                        <div id="overlay" class="overlay"></div>
-                        <div id="menu-photo" class="menu-photo">
-                            <img src="{% static 'img/menu.png' %}" alt="Меню">
-                        </div>
-                        
-                        <style>
-                            #menu-photo,
-                            #overlay {
-                                display: none;
-                            }
-                        </style>
-                        
-                        <script>
-                            $(document).ready(function() {
-                                $("#menu-btn").click(function(event) {
-                                    event.preventDefault();
-                                    $("#menu-photo").css("display", "flex");
-                                    $("#overlay").css("display", "block");
-                                });
-                        
-                                $("#overlay").click(function() {
-                                    $("#menu-photo").css("display", "none");
-                                    $(this).css("display", "none");
-                                });
-                        
-                                $("#menu-photo").click(function() {
-                                    $(this).css("display", "none");
-                                    $("#overlay").css("display", "none");
-                                });
-                            });
-                        </script>
                     </div>
+        
+                    <div id="overlay" class="overlay"></div>
+                    <div id="menu-photo" class="menu-photo">
+                        <img src="{% static 'img/menu.png' %}" alt="Меню">
+                    </div>
+        
                     <div class="col-lg-3 offset-lg-1">
                         <div class="footer-widget">
                             <h5>Информация</h5>
@@ -318,7 +293,7 @@
                                 </li>
                                 <li>
                                     <i class="fa fa-map-marker" style="left: -20px !important; top: 8px !important;"></i>
-                                    <span>Адрес</span>
+                                    <span>Адрес:</span>
                                     ул. Адама Мицкевича, 16, Lida
                                 </li>
                             </ul>
@@ -326,8 +301,57 @@
                     </div>
                 </div>
             </div>
-
         </footer>
+        
+        <style>
+            #menu-photo,
+            #overlay {
+                display: none;
+            }
+        
+            #menu-photo {
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgba(0, 0, 0, 0.8);
+                padding: 20px;
+                border-radius: 10px;
+                z-index: 1001;
+            }
+        
+            #overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 1000;
+            }
+        </style>
+        
+        <script>
+            $(document).ready(function() {
+                $("#menu-btn").click(function(event) {
+                    event.preventDefault();
+                    $("#menu-photo").css("display", "flex");
+                    $("#overlay").css("display", "block");
+                });
+        
+                $("#overlay").click(function() {
+                    $("#menu-photo").css("display", "none");
+                    $(this).css("display", "none");
+                });
+        
+                $("#menu-photo").click(function() {
+                    $(this).css("display", "none");
+                    $("#overlay").css("display", "none");
+                });
+            });
+        </script>
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
