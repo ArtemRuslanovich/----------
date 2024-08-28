@@ -274,6 +274,33 @@
                         <div id="menu-photo" class="menu-photo">
                             <img src="{% static 'img/menu.png' %}" alt="Меню">
                         </div>
+                        
+                        <style>
+                            #menu-photo,
+                            #overlay {
+                                display: none;
+                            }
+                        </style>
+                        
+                        <script>
+                            $(document).ready(function() {
+                                $("#menu-btn").click(function(event) {
+                                    event.preventDefault();
+                                    $("#menu-photo").css("display", "flex");
+                                    $("#overlay").css("display", "block");
+                                });
+                        
+                                $("#overlay").click(function() {
+                                    $("#menu-photo").css("display", "none");
+                                    $(this).css("display", "none");
+                                });
+                        
+                                $("#menu-photo").click(function() {
+                                    $(this).css("display", "none");
+                                    $("#overlay").css("display", "none");
+                                });
+                            });
+                        </script>
                     </div>
                     <div class="col-lg-3 offset-lg-1">
                         <div class="footer-widget">
@@ -305,8 +332,6 @@
 
     <!-- Js Plugins -->
     <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
-    <script src="{% static 'js/menu.js' %}"></script>
-
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
     <script src="{% static 'js/mixitup.min.js' %}"></script>
