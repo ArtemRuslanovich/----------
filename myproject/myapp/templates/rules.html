@@ -206,23 +206,30 @@
         #overlay {
             display: none;
         }
-
+    
         #menu-photo {
-            display: none; /* Make sure it is initially hidden */
             justify-content: center;
             align-items: center;
             position: fixed;
-            top: 100%;
-            left: 100%;
-            transform: translate(-50%, -50%);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-color: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            border-radius: 10px;
             z-index: 1001;
+            padding: 20px;
+            box-sizing: border-box;
         }
-
+    
+        #menu-photo img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+    
         #overlay {
-            display: none; /* Make sure it is initially hidden */
             position: fixed;
             top: 0;
             left: 0;
