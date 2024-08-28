@@ -711,13 +711,18 @@ ol {
 
 
 
-.about-text p.short-details {
+.about-text p.short-details,
+.about-text p.short-details li {
     font-size: 20px;
     font-weight: 600;
     color: #ffffff !important; /* Принудительное применение белого цвета */
     line-height: 28px;
     margin-bottom: 20px;
+}
+
+.about-text p.short-details ul {
     list-style-type: disc; /* Опционально, для добавления маркеров списка */
+    margin-left: 20px; /* Отступ для списка */
 }
 
 .about-text p.long-details {
