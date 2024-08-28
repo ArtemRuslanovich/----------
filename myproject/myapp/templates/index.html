@@ -542,13 +542,14 @@
     <!-- Cta Section End -->
 
     <!-- Map Section Begin -->
-    <section id="сontacts">
+    <section id="contacts">
         <div class="map">
             <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2351.056104572665!2d25.29262957628292!3d53.89520673351547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46de8b03efd35e9b%3A0xf1dba2fecb22ee85!2z0JrQuNCx0LXRgNC60LvRg9CxINCa0J7QndCd0JXQmtCi!5e0!3m2!1sru!2spl!4v1716213382040!5m2!1sru!2spl" height="590" style="border: 0" allowfullscreen=""></iframe>
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2351.056104572665!2d25.29262957628292!3d53.89520673351547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46de8b03efd35e9b%3A0xf1dba2fecb22ee85!2z0JrQuNCx0LXRgNC60LvRg9CxINCa0J7QndCd0JXQmtCi!5e0!3m2!1sru!2spl!4v1716213382040!5m2!1sru!2spl"
+            height="590" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
         </div>
         <!-- Map Section End -->
-
+    
         <!-- Footer Section Begin -->
         <footer class="footer-section">
             <div class="container">
@@ -570,7 +571,7 @@
                             </div>
                         </div>
                     </div>
-        
+    
                     <div class="col-lg-2">
                         <div class="footer-widget">
                             <ul class="workout-program">
@@ -582,12 +583,12 @@
                             </ul>
                         </div>
                     </div>
-        
+    
                     <div id="overlay" class="overlay"></div>
                     <div id="menu-photo" class="menu-photo">
                         <img src="{% static 'img/menu.png' %}" alt="Меню">
                     </div>
-        
+    
                     <div class="col-lg-3 offset-lg-1">
                         <div class="footer-widget">
                             <h5>Информация</h5>
@@ -613,14 +614,16 @@
                 </div>
             </div>
         </footer>
-        
+    
+        <!-- Style and Script must be placed here to ensure they apply correctly -->
         <style>
             #menu-photo,
             #overlay {
                 display: none;
             }
-        
+    
             #menu-photo {
+                display: none; /* Make sure it is initially hidden */
                 justify-content: center;
                 align-items: center;
                 position: fixed;
@@ -632,8 +635,9 @@
                 border-radius: 10px;
                 z-index: 1001;
             }
-        
+    
             #overlay {
+                display: none; /* Make sure it is initially hidden */
                 position: fixed;
                 top: 0;
                 left: 0;
@@ -643,7 +647,10 @@
                 z-index: 1000;
             }
         </style>
-        
+    
+        <!-- Make sure jQuery is included before your script -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
         <script>
             $(document).ready(function() {
                 $("#menu-btn").click(function(event) {
@@ -651,12 +658,12 @@
                     $("#menu-photo").css("display", "flex");
                     $("#overlay").css("display", "block");
                 });
-        
+    
                 $("#overlay").click(function() {
                     $("#menu-photo").css("display", "none");
                     $(this).css("display", "none");
                 });
-        
+    
                 $("#menu-photo").click(function() {
                     $(this).css("display", "none");
                     $("#overlay").css("display", "none");
