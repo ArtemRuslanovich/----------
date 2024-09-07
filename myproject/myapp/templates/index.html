@@ -234,15 +234,15 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <div class="section-title">
-                            <h2>Ивенты</h2>
+                            <h2 id="month-title">Ивенты</h2> <!-- Месяц будет здесь -->
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="timetable-controls">
-                            <ul>
-                                <li class="active" >Май</li>
+                            <ul id="month-list">
+                                <!-- Месяц будет добавлен сюда -->
                             </ul>
                         </div>
                     </div>
@@ -262,44 +262,55 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Данные из Excel будут здесь -->
+                            <!-- Данные из Google Sheets API будут здесь -->
                         </tbody>
                     </table>
                 </div>
             </div>
         </section>
     </section>
-
-    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+    
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            fetch("{% static 'excel/events.xlsx' %}")
-                .then(response => response.arrayBuffer())
+            const sheetId = '1p9E4piB58ah_nWgypIWAkss59T06gVXFXOmWQDVn1G8';
+            const apiKey = 'AIzaSyARDxXZzhv4UakkVYYzgBtf293sT2BoSFA';
+            const range = 'Sheet1!A1:G100'; // Укажите диапазон данных в таблице
+    
+            fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`)
+                .then(response => response.json())
                 .then(data => {
-                    const workbook = XLSX.read(data, { type: 'array' });
-                    const sheetName = workbook.SheetNames[0];
-                    const worksheet = workbook.Sheets[sheetName];
-                    const json = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
-                    populateTable(json);
+                    const rows = data.values;
+    
+                    // Извлекаем месяц из первой строки
+                    const month = rows[5][8]; // Предположим, что вторая ячейка первой строки содержит название месяца
+                    document.getElementById('month-title').textContent = `Ивенты на ${month}`;
+                    const monthLi = document.createElement('li');
+                    monthLi.className = 'active';
+                    monthLi.textContent = month;
+                    document.getElementById('month-list').appendChild(monthLi);
+    
+                    // Удаляем первую строку (где заголовок "Месяц"), чтобы она не попадала в данные таблицы
+                    rows.shift();
+    
+                    populateTable(rows);
                 });
-
+    
             function populateTable(data) {
                 const tbody = document.querySelector('tbody');
                 const timeSlots = new Set();
-
-                // Collect unique time slots
+    
                 data.slice(1).forEach(row => {
                     if (row[0]) timeSlots.add(row[0]);
                 });
-
-                // Initialize table rows with time slots
+    
+                // Инициализация строк с временными слотами
                 timeSlots.forEach(time => {
                     const tr = document.createElement('tr');
                     const timeTd = document.createElement('td');
                     timeTd.className = 'workout-time';
                     timeTd.textContent = time;
                     tr.appendChild(timeTd);
-
+    
                     for (let i = 0; i < 7; i++) {
                         const td = document.createElement('td');
                         td.className = 'hover-bg ts-item';
@@ -307,12 +318,12 @@
                     }
                     tbody.appendChild(tr);
                 });
-
-                // Populate the table with event data
+    
+                // Заполнение таблицы данными ивентов
                 data.slice(1).forEach(row => {
                     const time = row[0];
                     const tr = Array.from(tbody.children).find(tr => tr.children[0].textContent === time);
-
+    
                     if (tr) {
                         row.slice(1).forEach((cell, index) => {
                             if (cell) {
@@ -321,10 +332,12 @@
                                 const span = document.createElement('span');
                                 span.textContent = timeRange;
                                 const h6 = document.createElement('h6');
-                                h6.textContent = event ? event.replace(')', '') : 'Текст';
+                                h6.textContent = event ? event.replace(')', '') : ''; // Убираем лишний "Текст"
                                 td.setAttribute('data-tsmeta', event ? event.replace(')', '') : 'default');
                                 td.appendChild(span);
-                                td.appendChild(h6);
+                                if (h6.textContent) {
+                                    td.appendChild(h6);
+                                }
                             }
                         });
                     }
@@ -332,6 +345,8 @@
             }
         });
     </script>
+    
+    
     <!-- Class Time Section End -->
 
     <!-- Price Plan Section Begin -->
