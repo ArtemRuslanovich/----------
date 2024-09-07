@@ -272,79 +272,49 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const sheetId = '1p9E4piB58ah_nWgypIWAkss59T06gVXFXOmWQDVn1G8';
-            const apiKey = 'AIzaSyARDxXZzhv4UakkVYYzgBtf293sT2BoSFA';
-            const range = 'Sheet1!A1:G100'; // Укажите диапазон данных в таблице
+            const sheetId = '1p9E4piB58ah_nWgypIWAkss59T06gVXFXOmWQDVn1G8'; // Ваш ID таблицы
+            const apiKey = 'AIzaSyARDxXZzhv4UakkVYYzgBtf293sT2BoSFA'; // Ваш API ключ
+            const range = 'Sheet1!A1:I10'; // Задаем диапазон данных, чтобы захватить I10 для месяца
     
             fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`)
                 .then(response => response.json())
                 .then(data => {
                     const rows = data.values;
     
-                    // Извлекаем месяц из первой строки
-                    const month = rows[5][8]; // Предположим, что вторая ячейка первой строки содержит название месяца
+                    // Извлекаем месяц из ячейки I10 (10-я строка, 9-я колонка)
+                    const month = rows[9][8]; // 9-я строка, 8-я колонка (нумерация начинается с 0)
                     document.getElementById('month-title').textContent = `Ивенты на ${month}`;
                     const monthLi = document.createElement('li');
                     monthLi.className = 'active';
                     monthLi.textContent = month;
                     document.getElementById('month-list').appendChild(monthLi);
     
-                    // Удаляем первую строку (где заголовок "Месяц"), чтобы она не попадала в данные таблицы
-                    rows.shift();
-    
-                    populateTable(rows);
+                    // Обработка данных для таблицы
+                    populateTable(rows.slice(1, 6)); // Берем строки с ивентами (со 2-й по 6-ю строку)
                 });
     
             function populateTable(data) {
                 const tbody = document.querySelector('tbody');
-                const timeSlots = new Set();
-    
-                data.slice(1).forEach(row => {
-                    if (row[0]) timeSlots.add(row[0]);
-                });
     
                 // Инициализация строк с временными слотами
-                timeSlots.forEach(time => {
+                data.forEach(row => {
                     const tr = document.createElement('tr');
-                    const timeTd = document.createElement('td');
-                    timeTd.className = 'workout-time';
-                    timeTd.textContent = time;
-                    tr.appendChild(timeTd);
-    
-                    for (let i = 0; i < 7; i++) {
+                    row.forEach((cell, index) => {
                         const td = document.createElement('td');
-                        td.className = 'hover-bg ts-item';
+                        if (index === 0) {
+                            td.className = 'workout-time'; // Время ивента
+                        } else {
+                            td.className = 'hover-bg ts-item'; // Дни недели
+                        }
+                        td.textContent = cell ? cell : ''; // Установка значения ячейки
                         tr.appendChild(td);
-                    }
+                    });
                     tbody.appendChild(tr);
-                });
-    
-                // Заполнение таблицы данными ивентов
-                data.slice(1).forEach(row => {
-                    const time = row[0];
-                    const tr = Array.from(tbody.children).find(tr => tr.children[0].textContent === time);
-    
-                    if (tr) {
-                        row.slice(1).forEach((cell, index) => {
-                            if (cell) {
-                                const td = tr.children[index + 1];
-                                const [timeRange, event] = cell.split(' (');
-                                const span = document.createElement('span');
-                                span.textContent = timeRange;
-                                const h6 = document.createElement('h6');
-                                h6.textContent = event ? event.replace(')', '') : ''; // Убираем лишний "Текст"
-                                td.setAttribute('data-tsmeta', event ? event.replace(')', '') : 'default');
-                                td.appendChild(span);
-                                if (h6.textContent) {
-                                    td.appendChild(h6);
-                                }
-                            }
-                        });
-                    }
                 });
             }
         });
     </script>
+    
     
     
     <!-- Class Time Section End -->
