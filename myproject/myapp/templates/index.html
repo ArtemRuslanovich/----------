@@ -274,45 +274,46 @@
         document.addEventListener('DOMContentLoaded', () => {
             const sheetId = '1p9E4piB58ah_nWgypIWAkss59T06gVXFXOmWQDVn1G8'; // Ваш ID таблицы
             const apiKey = 'AIzaSyARDxXZzhv4UakkVYYzgBtf293sT2BoSFA'; // Ваш API ключ
-            const range = 'Sheet1!A1:I10'; // Задаем диапазон данных, чтобы захватить I10 для месяца
-    
+            const range = 'Sheet1!A1:I6'; // Обновленный диапазон данных
+
             fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`)
                 .then(response => response.json())
                 .then(data => {
                     const rows = data.values;
-    
-                    // Извлекаем месяц из ячейки I10 (10-я строка, 9-я колонка)
-                    const month = rows[9][8]; // 9-я строка, 8-я колонка (нумерация начинается с 0)
+
+                    // Извлекаем месяц из ячейки I6 (5-я строка, 8-я колонка)
+                    const month = rows[5][8]; 
                     document.getElementById('month-title').textContent = `Ивенты на ${month}`;
                     const monthLi = document.createElement('li');
                     monthLi.className = 'active';
                     monthLi.textContent = month;
                     document.getElementById('month-list').appendChild(monthLi);
-    
+
                     // Обработка данных для таблицы
                     populateTable(rows.slice(1, 6)); // Берем строки с ивентами (со 2-й по 6-ю строку)
+                })
+                .catch(error => console.error('Error fetching data:', error));
+
+        function populateTable(data) {
+            const tbody = document.querySelector('tbody');
+
+            // Инициализация строк с временными слотами
+            data.forEach(row => {
+                const tr = document.createElement('tr');
+                row.forEach((cell, index) => {
+                    const td = document.createElement('td');
+                    if (index === 0) {
+                        td.className = 'workout-time'; // Время ивента
+                    } else {
+                        td.className = 'hover-bg ts-item'; // Дни недели
+                    }
+                    td.textContent = cell ? cell : ''; // Установка значения ячейки
+                    tr.appendChild(td);
                 });
-    
-            function populateTable(data) {
-                const tbody = document.querySelector('tbody');
-    
-                // Инициализация строк с временными слотами
-                data.forEach(row => {
-                    const tr = document.createElement('tr');
-                    row.forEach((cell, index) => {
-                        const td = document.createElement('td');
-                        if (index === 0) {
-                            td.className = 'workout-time'; // Время ивента
-                        } else {
-                            td.className = 'hover-bg ts-item'; // Дни недели
-                        }
-                        td.textContent = cell ? cell : ''; // Установка значения ячейки
-                        tr.appendChild(td);
-                    });
-                    tbody.appendChild(tr);
-                });
-            }
-        });
+                tbody.appendChild(tr);
+            });
+        }
+    });
     </script>
     
     
